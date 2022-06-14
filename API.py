@@ -7,5 +7,3 @@ client = tweepy.Client(
     access_token=keys.access_token,
     access_token_secret=keys.access_token_secret
 )
-
-client.create_tweet(text="hello")

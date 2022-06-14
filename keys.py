@@ -1,4 +1,3 @@
-
 bearer_token = 'AAAAAAAAAAAAAAAAAAAAAN9pdQEAAAAAD%2Be01cLOK24E4PyEAHzce1EHFqU%3DKG1lxDsfd2m4PULce0MDrk3sB7Fihd9iZ0jyVLKgnqfAbsUGOm'
 
 # Keys for Twitter
