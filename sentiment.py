@@ -1,22 +1,17 @@
 import nltk
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-sentence = 'Shitty fun doing'
-positive = []
-negative = []
-lst = []
-lsti = []
+NEG = 0
+POS = 1
+NEU = 0.5
 
-vs = SentimentIntensityAnalyzer().polarity_scores(sentence)
-print(vs)
-for i in vs: 
-    lst.append(i)
+sentence = 'Shit happy sad love hot'
 
-for i in vs: 
-    lsti.append(vs[i])
-
-#print(lst)
-#print(lsti)
-#print(positive)
-#print(negative)
-
+def sentiment_score(sentence): 
+    vs = SentimentIntensityAnalyzer().polarity_scores(sentence)
+    scorev1 = vs['neg'] * NEG + vs['neu'] * NEU + vs['pos'] * POS
+    if vs['pos'] == 0 or vs['neg'] == 0: 
+        scorev2 = scorev1
+    else: 
+        scorev2 = scorev1 * (vs['pos'] / vs['neg'])
+    return scorev1, scorev2
