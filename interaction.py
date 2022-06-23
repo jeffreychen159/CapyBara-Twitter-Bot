@@ -1,5 +1,5 @@
 from tweetinfo import TweetInfo
-from userinfo import UserInfo
+from userinfo import User
 import API
 
 class Interaction(): 
@@ -14,10 +14,3 @@ class Interaction():
     
     def retweet(self): 
         self.client.retweet(self.tweetID, user_auth=True)
-
-    def make_tweet(self, tweetItem):
-        self.client.create_tweet(text=tweetItem, user_auth=True)
-
-    
-    def reply_to_tweet(self, tweetItem, tweetID): 
-        self.client.create_tweet(in_reply_to_tweet_id=tweetID, text=tweetItem, user_auth=True)
