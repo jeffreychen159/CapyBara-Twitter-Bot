@@ -17,7 +17,9 @@ class User():
     def get_tweet_mentions(self): 
         mentions = self.client.get_users_mentions(self.userID, user_auth=True)
         mentions_txt = []
-        
-        for mention in mentions.data: 
-            mentions_txt.append((mention.id, mention.txt))
-        return mentions_txt
+        if mentions.data == None: 
+            return []
+        else: 
+            for mention in mentions.data: 
+                mentions_txt.append((mention.id, mention.text))
+            return mentions_txt
