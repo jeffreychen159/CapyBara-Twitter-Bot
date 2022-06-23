@@ -1,6 +1,6 @@
 import API
 
-class UserInfo(): 
+class User(): 
     def __init__(self, userID) -> None:
         self.userID = userID
         self.client = API.client 
@@ -14,17 +14,10 @@ class UserInfo():
         return follower_list
 
 
-    def get_tweet_mentions_txt(self): 
+    def get_tweet_mentions(self): 
         mentions = self.client.get_users_mentions(self.userID, user_auth=True)
         mentions_txt = []
+        
         for mention in mentions.data: 
-            mentions_txt.append(mention.txt)
+            mentions_txt.append((mention.id, mention.txt))
         return mentions_txt
-
-
-    def get_tweet_mentions_id(self):
-        mentions = self.client.get_users_mentions(self.userID, user_auth=True)
-        mentions_id = []
-        for mention in mentions.data: 
-            mentions_id.append(mention.id)
-        return mentions_id
