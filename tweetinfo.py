@@ -26,3 +26,4 @@ class TweetInfo():
         for quote_tweeter in quote_tweeters.data: 
             quote_tweeters_ids.append(quote_tweeter)
         return quote_tweeters_ids
+

@@ -24,19 +24,19 @@ def main():
     replied = []
 
     if True:  
-        #database.get_fact_count()
-        #fact = database.get_fact()
-        #make_tweet(fact)
+        database.get_fact_count()
+        fact = database.get_fact()
+        make_tweet(fact)
 
-        replies = user1_id.get_tweet_mentions()
-        for reply in replies: 
-            if reply not in replied: 
-                message = get_reply.auto_reply_message(reply[1])
-                reply_to_tweet(message, reply[0])
-                replied.append(reply)
-            else: 
-                pass
-        print(replied)
+        #replies = user1_id.get_tweet_mentions()
+        #for reply in replies: 
+            #if reply not in replied: 
+                #message = get_reply.auto_reply_message(reply[1])
+                #reply_to_tweet(message, reply[0])
+                #replied.append(reply)
+            #else: 
+                #pass
+        #print(replied)
 
 
 
