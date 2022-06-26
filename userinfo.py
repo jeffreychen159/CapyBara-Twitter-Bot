@@ -5,16 +5,16 @@ class User():
         self.userID = userID
         self.client = API.client 
 
-
-    def get_followers(self): 
+    # Gets users who follow a specific user
+    def get_followers(self) -> list: 
         followers = self.client.get_users_followers(self.userID, user_auth=True)
         follower_list = []
         for follower in followers.data: 
             follower_list.append(follower)
         return follower_list
 
-
-    def get_tweet_mentions(self): 
+    # Gets users who mention a specific user
+    def get_tweet_mentions(self) -> list: 
         mentions = self.client.get_users_mentions(self.userID, user_auth=True)
         mentions_txt = []
         if mentions.data == None: 

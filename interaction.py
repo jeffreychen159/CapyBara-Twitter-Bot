@@ -7,10 +7,10 @@ class Interaction():
         self.tweetID = tweetID
         self.client = API.client
     
-
-    def like_tweet(self): 
+    # Likes tweet
+    def like_tweet(self) -> None: 
         self.client.like(self.tweetID, user_auth=True)
 
-    
-    def retweet(self): 
+    # Retweets
+    def retweet(self) -> None: 
         self.client.retweet(self.tweetID, user_auth=True)

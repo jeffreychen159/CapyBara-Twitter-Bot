@@ -3,7 +3,8 @@ class Facts():
         self.input_text = input_text
         self.output_text = output_text
 
-    def get_fact(self): 
+    # Gets the fact from txt file
+    def get_fact(self) -> str: 
         with open(self.input_text, 'r') as f: 
             line = f.readline()
             rest_lines = f.readlines()
@@ -13,7 +14,8 @@ class Facts():
             print(line, file=f)
         return line
 
-    def get_fact_count(self): 
+    # Gets fact count of text file and prints in console
+    def get_fact_count(self) -> None: 
         with open(self.input_text, 'r') as f: 
             all_lines = f.readlines()
         if len(all_lines) == 1: 
