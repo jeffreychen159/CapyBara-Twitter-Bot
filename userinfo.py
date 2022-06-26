@@ -1,6 +1,7 @@
 import API
 
 class User(): 
+    '''Creates a user class where the bot can interact with user data'''
     def __init__(self, userID) -> None:
         self.userID = userID
         self.client = API.client 

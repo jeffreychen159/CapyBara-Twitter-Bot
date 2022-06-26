@@ -3,6 +3,7 @@ from userinfo import User
 import API
 
 class Interaction(): 
+    '''Creates an obeject for the bot to interact with inividual tweets'''
     def __init__(self, tweetID) -> None:
         self.tweetID = tweetID
         self.client = API.client

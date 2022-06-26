@@ -1,6 +1,7 @@
 import API
 
 class TweetInfo(): 
+    '''Creates a class where the bot can gather data about a specific tweet'''
     def __init__(self, tweetID) -> None:
         self.tweetID = tweetID
         self.client = API.client
