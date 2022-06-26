@@ -1,7 +1,0 @@
-bearer_token = 'AAAAAAAAAAAAAAAAAAAAAN9pdQEAAAAAD%2Be01cLOK24E4PyEAHzce1EHFqU%3DKG1lxDsfd2m4PULce0MDrk3sB7Fihd9iZ0jyVLKgnqfAbsUGOm'
-
-# Keys for Twitter
-consumer_key="ou3tdIsypm5VOlMAXYONWSWJm"
-consumer_secret="gXAnHaEEkG0nJpO5akiolwqhFwTCTyMsewucI707qJ3O3lJQQX"
-access_token="1533251020251348993-PbVDYonIXGcBDQGv8qv2VoFA2cH4ZS"
-access_token_secret="znGDkGw0D7qL5cBh6DxmtNzi1VTAvIlhfDyy6bP9PenWP"
